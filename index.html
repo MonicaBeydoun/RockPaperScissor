@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JOIN MONICA'S GAME!!</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js"></script>
+</head>
+<body>
+<p class="title">ROCK PAPER SCISSOR GAMEE!!</p>
+<button onclick="playGame(ROCK);" class="style-b"><img src="assets/images/rock.png" class="style-img"></button>
+<button onclick="playGame(PAPER);" class="style-b"><img src="assets/images/paper.png" class="style-img"></button>
+<button onclick="playGame(SCISSOR);" class="style-b"><img src="assets/images/scissor.png" class="style-img"></button>
+<p class="js-result win"></p>
+<p class="js-move"></p>
+<p class="js-button score"></p>
+<button onclick=" 
+score.lose=0;
+score.tie=0;
+score.won=0;
+updatescore();
+localStorage.removeItem('score');
+" class="reset">RESET GAME</button>
+<p class="monica"> Monica was hereee -ENJOYY-</p>
+
+
+
+
+
+</body>
+</html>

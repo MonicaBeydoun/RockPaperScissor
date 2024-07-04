@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(25,25,25);
+    color: white;
+    font-family: Arial;
+ }
+.title{
+    font-size: 30px;
+    font-weight: bold;
+}
+.style-img{
+    height: 50px;
+}
+.style-b{
+    background-color: black;
+    border-color: white;
+    border-radius: 100px;
+    padding: 30px;
+    border-width: 3px;
+    margin-right: 13px;
+    cursor: pointer;
+}
+.win{
+ font-size: 25px;
+ font-weight: bold;
+ margin-top: 50px;
+}
+.score{
+    margin-top: 60px;
+}
+.reset{
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.monica{
+    margin-top: 150px;
+}
