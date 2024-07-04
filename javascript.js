@@ -3,6 +3,8 @@ const ROCK = 'ROCK';
         const SCISSOR = 'SCISSOR';
 
 
+        //javascript change bla bla
+
 
 
         let score=JSON.parse(localStorage.getItem('score'));
