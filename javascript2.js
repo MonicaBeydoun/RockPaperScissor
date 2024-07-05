@@ -1,22 +1,32 @@
-        const ROCK = 'ROCK';
-        const PAPER = 'PAPER';
-        const SCISSOR = 'SCISSOR';
+const ROCK = 'ROCK';
+const PAPER = 'PAPER';
+const SCISSOR = 'SCISSOR';
+let score
 
-        let score=JSON.parse(localStorage.getItem('score'));
-        if(score===null)
-            score={ won:0, lose:0, tie:0};
 
-        document.querySelector('.Results').innerHTML=`Wins: ${score.won} - Ties: ${score.tie} - Loses: ${score.lose}`;
-            
+
+        const initGame = () => {
+          
+            score=JSON.parse(localStorage.getItem('score'));
+            if(score===null)
+                score={ won:0, lose:0, tie:0};
+    
+            document.querySelector('.Results').innerHTML=`Wins: ${score.won} - Ties: ${score.tie} - Loses: ${score.lose}`;
+                
+    
+        }
+
+
+initGame();
+
+
      const playGame = playerMove => {
 
         const computerChoice= getComputerChoice();
         const results = getResults(playerMove,computerChoice)
          updateScore(results)
-         updateView();
+         updateView(playerMove, computerChoice);
 
- document.querySelector('.YourHand').innerHTML=`<img src="assets/images/${playerMove}.png" class="" alt="img">`;
- document.querySelector('.ComputerHand').innerHTML=`<img src="assets/images/${computerChoice}.png" class="" alt="img">`;
      }
 
      const getResults = (playerMove, computerChoice) => {
@@ -86,15 +96,26 @@
             localStorage.setItem('score',JSON.stringify(score));
         }
 
-        const updateView = () => {
-            document.querySelector('.Results').innerHTML=`Wins: ${score.won} - Ties: ${score.tie} - Loses: ${score.lose}`;
+        const updateView = (playerMove, computerChoice) => {
+ document.querySelector('.Results').innerHTML=`Wins: ${score.won} - Ties: ${score.tie} - Loses: ${score.lose}`;
+ if(playerMove && computerChoice){
+    document.querySelector('.YourHand').innerHTML=`<img src="assets/images/${playerMove}.png" class="" alt="img">`;
+    document.querySelector('.ComputerHand').innerHTML=`<img src="assets/images/${computerChoice}.png" class="" alt="img">`;
+ }
+ else {
+    document.querySelector('.YourHand').innerHTML=``;
+    document.querySelector('.ComputerHand').innerHTML=``;
+ }
+
         }
+
+
+
 
         const reset = () => {
             score.lose=0;
             score.tie=0;
             score.won=0;
             localStorage.removeItem('score');
-            updateView();
-
+            updateView()
         }
