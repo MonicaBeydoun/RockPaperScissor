@@ -1,0 +1,103 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Adelle Sans Devanagari", serif
+}
+
+.Container {
+    height: 100vh;
+    width: 100vw;
+    background: rgb(25,25,25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.Title {
+    letter-spacing: 2px;
+    animation: shake 1.5s infinite;
+}
+
+.ButtonsContainer {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.ImgButton {
+
+}
+
+
+.Img {
+    width: 9rem;
+    height: auto;
+    transition: width 500ms;
+
+}
+
+.Img:hover {
+    width: 10rem;
+    transition: width 300ms;
+
+}
+
+.GameContainer {
+    width: 50%;
+    display: flex;
+    padding: 0 1rem;
+    margin-top: 2rem;
+    min-height: 50%;
+
+}
+
+.Names {
+    font-size: 1.2rem;
+}
+.LeftDiv {
+    width: 50%;
+    border-right: 1px solid white;
+}
+.RightDiv {
+    width: 50%;
+    text-align: end;
+    border-left: 1px solid white;
+
+}
+
+
+.RestButton {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    border: none;
+    padding: 0.6rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 2px;
+    color: white;
+    background: transparent;
+    border-left: 1px solid white;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+
+}
+
+
+.RestButton:hover {
+    background: white;
+    color: black;
+    border: none;
+    transition: background-color 1s, color 1s;
+}
+
+@keyframes shake {
+    50%{
+        transform: translateY(15%);
+        font-size: 1.6rem;
+    }
+}
+

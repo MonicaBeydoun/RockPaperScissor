@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JOIN MONICA'S GAME!!</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+<div class="Container">
+    <h2 class="Title">ROCK PAPER SCISSOR!</h2>
+    <div class="ButtonsContainer">
+        <button onclick="playGame(ROCK);" class="ImgButton"><img src="assets/images/rock.png" class="Img" alt="img"></button>
+        <button onclick="playGame(PAPER);" class="ImgButton"><img src="assets/images/paper.png" class="Img" alt="img"></button>
+        <button onclick="playGame(SCISSOR);" class="ImgButton"><img src="assets/images/scissor.png" class="Img" alt="img"></button>
+    </div>
+    <div class="GameContainer">
+        <div class="LeftDiv">
+            <p class="Names">Your choice</p>
+            <div class="YourHand"></div>
+        </div>
+        <div class="RightDiv">
+            <p class="Names">Computer's choice</p>
+            <div class="ComputerHand"></div>
+        </div>
+    </div>
+    <p class="Results"></p>
+
+</div>
+<button class="RestButton" onclick="reset()">Reset Score</button>
+</body>
+</html>
+
+<script src="javascript2.js"></script>
